@@ -1,7 +1,7 @@
 package com.looxidlabs.carrotcloning.home.data
 
-import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
+import androidx.lifecycle.LiveData
 
 //This interface is for writing SQL
 @Dao

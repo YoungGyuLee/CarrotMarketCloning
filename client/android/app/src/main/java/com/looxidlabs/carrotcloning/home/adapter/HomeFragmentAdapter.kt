@@ -8,18 +8,25 @@ import com.bumptech.glide.RequestManager
 import com.looxidlabs.carrotcloning.R
 import com.looxidlabs.carrotcloning.home.data.HomeFragmentData
 
-class HomeFragmentAdapter(private var homes : ArrayList<HomeFragmentData>,
-                          private var requestManager : RequestManager, private var context : Context) :
+class HomeFragmentAdapter(private var requestManager : RequestManager) :
     RecyclerView.Adapter<HomeFragmentViewHolder>() {
+
+    private var homes = listOf<HomeFragmentData>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeFragmentViewHolder {
         return HomeFragmentViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_home_item,
             parent,false))
     }
 
     override fun onBindViewHolder(holder: HomeFragmentViewHolder, position: Int) {
-//        holder.title = homeItems[position]
+        holder.bind(homes[position], requestManager)
     }
 
     override fun getItemCount(): Int = homes.size
+
+    fun setItems(homes : List<HomeFragmentData>){
+        this.homes = homes
+        notifyDataSetChanged()
+    }
 
 }

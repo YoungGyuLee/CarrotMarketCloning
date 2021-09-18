@@ -1,8 +1,9 @@
 package com.looxidlabs.carrotcloning.home.repository
 
 import android.app.Application
-import android.arch.lifecycle.LiveData
+
 import android.provider.ContactsContract
+import androidx.lifecycle.LiveData
 import com.looxidlabs.carrotcloning.home.data.HomeFragmentData
 import com.looxidlabs.carrotcloning.home.data.HomeFragmentDatabase
 import java.lang.Exception
