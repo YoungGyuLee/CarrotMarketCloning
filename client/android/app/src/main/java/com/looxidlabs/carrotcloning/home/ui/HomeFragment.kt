@@ -18,7 +18,7 @@ import com.looxidlabs.carrotcloning.home.data.HomeFragmentData
 import com.looxidlabs.carrotcloning.home.viewmodel.HomeFragmentViewModel
 
 class HomeFragment : Fragment(), View.OnClickListener {
-
+    //check something
     lateinit var homeFragmentViewModel : HomeFragmentViewModel
     lateinit var homeFragmentAdapter : HomeFragmentAdapter
     lateinit var requestManager : RequestManager
